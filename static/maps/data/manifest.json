@@ -1,0 +1,29 @@
+{
+  "snapshots": [
+    {
+      "id": "2026-07-01T20-48-26Z",
+      "path": "/maps/data/snapshots/2026-07-01T20-48-26Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-01T20:51:28.020170+00:00"
+    },
+    {
+      "id": "2026-07-01T07-42-01Z",
+      "path": "/maps/data/snapshots/2026-07-01T07-42-01Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-01T09:37:26.678194+00:00"
+    },
+    {
+      "id": "2026-07-01T07-39-21Z",
+      "path": "/maps/data/snapshots/2026-07-01T07-39-21Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-01T07:40:20.398059+00:00"
+    },
+    {
+      "id": "2026-07-01T05-40-34Z",
+      "path": "/maps/data/snapshots/2026-07-01T05-40-34Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-01T06:20:21.260490+00:00"
+    }
+  ],
+  "current": "2026-07-01T20-48-26Z"
+}

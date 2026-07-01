@@ -1,0 +1,132 @@
+// Keep the desktop navigation on one line. The theme's default spacing makes
+// the menu wrap at common laptop widths, while its absolute header then covers
+// the page title.
+@media screen and (min-width: 992px)
+  .nav-link
+    padding-left: 0.55rem
+    padding-right: 0.55rem
+    white-space: nowrap
+
+  .search_field, .search_results
+    width: 10rem
+
+  .nav-item .search
+    margin-right: 0.5rem
+
+  .color_mode
+    margin-left: 0.25rem
+
+// The complete navigation still needs more room than the theme's original
+// 992px desktop breakpoint provides. Use the overlay menu until it fits.
+@media screen and (min-width: 992px) and (max-width: 1399px)
+  .nav
+    grid-template-columns: 1fr
+
+  .nav_toggle
+    display: flex
+
+  .nav_body
+    transform: translateX(-101vw)
+    position: fixed
+    height: 100vh
+    justify-content: flex-start
+    background: var(--accent)
+    flex-direction: column
+
+  .nav-item .search
+    margin-right: 0
+
+.coverage-map-frame
+  margin: 2rem 0
+
+  figcaption
+    color: var(--text)
+    font-size: 0.92rem
+    margin-top: 0.55rem
+    opacity: 0.78
+
+.coverage-map
+  aspect-ratio: 16 / 9
+  min-height: 420px
+  width: 100%
+  border: 1px solid rgba(0, 0, 0, 0.16)
+  background: #e9ecef
+
+  img,
+  canvas
+    margin: 0 !important
+    max-height: none !important
+    max-width: none !important
+    padding: 0 !important
+
+.coverage-map-legend,
+.coverage-map-loading,
+.coverage-map-error
+  background: rgba(255, 255, 255, 0.94)
+  border: 1px solid rgba(0, 0, 0, 0.14)
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15)
+  color: #1f2933
+  font-size: 0.76rem
+  line-height: 1.25
+  padding: 0.45rem 0.55rem
+
+.coverage-map-legend
+  max-width: 16rem
+
+.coverage-map-legend-row
+  align-items: center
+  display: flex
+  gap: 0.5rem
+  margin: 0.15rem 0
+  white-space: nowrap
+
+.coverage-map-legend-line
+  border-top: 4px solid var(--line-color)
+  display: inline-block
+  flex: 0 0 1.8rem
+  width: 1.8rem
+
+.coverage-map-legend-line.dashed
+  border-top-style: dashed
+
+.coverage-map-error
+  color: #8b0000
+  max-width: 18rem
+
+.coverage-map-popup
+  display: grid
+  grid-template-columns: max-content 1fr
+  column-gap: 0.6rem
+  row-gap: 0.2rem
+  margin: 0.5rem 0 0
+
+  dt
+    color: #52606d
+    font-weight: 600
+
+  dd
+    margin: 0
+
+.content table
+  display: block
+  overflow-x: auto
+
+  th,
+  td
+    white-space: nowrap
+
+@media screen and (max-width: 700px)
+  .coverage-map
+    aspect-ratio: auto
+    min-height: 460px
+
+  .coverage-map-legend
+    font-size: 0.68rem
+    padding: 0.35rem 0.45rem
+
+  .coverage-map-legend-row
+    gap: 0.35rem
+
+  .coverage-map-legend-line
+    flex-basis: 1.25rem
+    width: 1.25rem

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title">
+  <title id="title">Mapping Tournai capture note</title>
+  <rect width="1200" height="675" fill="#1c1c1e"/>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-60 510C130 390 220 570 390 430S690 210 820 330s230 60 440-80" stroke="#30d158" stroke-width="28"/>
+    <path d="M80 100c160 80 220 20 330 90s160 230 330 200 210-180 410-110" stroke="#eeeeee" stroke-opacity=".55" stroke-width="12"/>
+    <path d="M160 650c70-180 210-240 310-170s190 80 290-20 200-120 330-50" stroke="#eeeeee" stroke-opacity=".28" stroke-width="9"/>
+    <circle cx="775" cy="315" r="54" fill="#1c1c1e" stroke="#30d158" stroke-width="20"/>
+    <circle cx="775" cy="315" r="13" fill="#30d158"/>
+  </g>
+  <text x="70" y="590" fill="#eeeeee" font-family="Arial, sans-serif" font-size="68">Mapping Tournai</text>
+</svg>

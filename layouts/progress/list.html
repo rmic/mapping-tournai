@@ -1,0 +1,9 @@
+{{- define "main" -}}
+  {{- $target := "/progress/coverage/" | absURL -}}
+  <meta http-equiv="refresh" content="0; url={{ $target }}">
+  <script>window.location.replace({{ $target }});</script>
+  <div class="content">
+    <h1>Coverage status</h1>
+    <p><a href="{{ $target }}">Open the current coverage status page.</a></p>
+  </div>
+{{- end -}}

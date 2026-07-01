@@ -1,0 +1,23 @@
+.venv/
+__pycache__/
+*.py[cod]
+.DS_Store
+public/
+resources/_gen/
+.hugo_build.lock
+.playwright-mcp/
+
+# Local data generation and analysis tooling stays outside the public site repo.
+scripts/
+tests/
+road-capture-planner/
+requirements.txt
+/data/
+
+# Never publish local secrets or credentials.
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx

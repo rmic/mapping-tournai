@@ -1,0 +1,22 @@
+{{- $data := .Get "data" -}}
+{{- $kind := .Get "kind" | default "coverage" -}}
+{{- $title := .Get "title" | default "Coverage map" -}}
+{{- $height := .Get "height" | default "560px" -}}
+{{- $id := printf "leaflet-map-%s" (substr (md5 (printf "%s-%s-%s" .Page.RelPermalink $data $kind)) 0 10) -}}
+{{- if not (.Page.Scratch.Get "leaflet-assets") -}}
+<link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+<script defer src="/vendor/leaflet/leaflet.js"></script>
+<script defer src="/js/leaflet-coverage-map.js"></script>
+{{- .Page.Scratch.Set "leaflet-assets" true -}}
+{{- end -}}
+<figure class="coverage-map-frame">
+  <div
+    id="{{ $id }}"
+    class="coverage-map"
+    style="height: {{ $height }};"
+    data-geojson="{{ $data }}"
+    data-map-kind="{{ $kind }}"
+    data-map-title="{{ $title }}"
+  ></div>
+  <figcaption>{{ $title }}</figcaption>
+</figure>
