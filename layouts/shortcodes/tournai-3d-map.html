@@ -7,12 +7,10 @@
     <h2>Coverage Quality</h2>
     <div class="tournai-3d-map-legend">
       <div><span class="line continuous" style="--line-color:#2cc28a"></span>Fresh 360</div>
-      <div><span class="line dashed" style="--line-color:#2cc28a"></span>Fresh front-facing</div>
-      <div><span class="line continuous" style="--line-color:#f3bf42"></span>Stale 360</div>
-      <div><span class="line dashed" style="--line-color:#f3bf42"></span>Stale front-facing</div>
-      <div><span class="line continuous" style="--line-color:#8b929c"></span>Outdated 360</div>
-      <div><span class="line dashed" style="--line-color:#8b929c"></span>Outdated front-facing</div>
-      <div><span class="line dashed" style="--line-color:#f59b42"></span>Partial 360</div>
+      <div><span class="line continuous" style="--line-color:#f59b42"></span>Fresh front-facing</div>
+      <div><span class="line dashed" style="--line-color:#2cc28a"></span>Partial 360</div>
+      <div><span class="line continuous" style="--line-color:#f8d64e"></span>Stale</div>
+      <div><span class="line continuous" style="--line-color:#8b929c"></span>Outdated</div>
     </div>
   </aside>
   <div id="tournai-3d-map-status" class="tournai-3d-map-status">Loading coverage quality...</div>
@@ -183,10 +181,10 @@
         "match",
         ["get", "map_status"],
         "full360_fresh", "#2cc28a",
-        "front_fresh", "#2cc28a",
-        "full360_stale", "#f3bf42",
-        "front_stale", "#f3bf42",
-        "partial_360", "#f59b42",
+        "front_fresh", "#f59b42",
+        "partial_360", "#2cc28a",
+        "full360_stale", "#f8d64e",
+        "front_stale", "#f8d64e",
         "needs_review", "#8d72ff",
         "full360_outdated", "#8b929c",
         "front_outdated", "#8b929c",
@@ -217,10 +215,8 @@
     function coverageLabel(status) {
       if (status === "full360_fresh") return "Fresh 360";
       if (status === "front_fresh") return "Fresh front-facing";
-      if (status === "full360_stale") return "Stale 360";
-      if (status === "front_stale") return "Stale front-facing";
-      if (status === "full360_outdated") return "Outdated 360";
-      if (status === "front_outdated") return "Outdated front-facing";
+      if (status === "full360_stale" || status === "front_stale") return "Stale";
+      if (status === "full360_outdated" || status === "front_outdated") return "Outdated";
       if (status === "partial_360") return "Partial 360";
       if (status === "needs_review") return "Needs review";
       return "Other";
@@ -234,11 +230,9 @@
       const order = [
         "Fresh 360",
         "Fresh front-facing",
-        "Stale 360",
-        "Stale front-facing",
-        "Outdated 360",
-        "Outdated front-facing",
         "Partial 360",
+        "Stale",
+        "Outdated",
         "Needs review",
         "Other",
       ];
@@ -266,7 +260,7 @@
         const response = await fetch("/maps/data/manifest.json", { cache: "no-store" });
         if (!response.ok) throw new Error("manifest unavailable");
         const manifest = await response.json();
-        return manifest.current || "local";
+        return manifest.assets_version || manifest.current || "local";
       } catch {
         return "local";
       }
@@ -279,6 +273,7 @@
     function popupHtml(props) {
       const title = props.name || `${props.osm_type}/${props.osm_id}`;
       const rows = [
+        ["Geometry", props.geometry_role === "building_part" ? "building:part" : "building footprint"],
         ["Height", `${props.height_m} m`],
         ["Source", props.height_source],
         ["Levels", props.building_levels || "n/a"],
@@ -380,10 +375,7 @@
             "line-dasharray": [
               "match",
               ["get", "map_status"],
-              "front_fresh", ["literal", [1, 1.4]],
-              "front_stale", ["literal", [1, 1.4]],
-              "front_outdated", ["literal", [1, 1.4]],
-              "partial_360", ["literal", [2.2, 1.4]],
+              "partial_360", ["literal", [1, 1.4]],
               "needs_review", ["literal", [3, 1.2, 0.8, 1.2]],
               ["literal", [1, 0]],
             ],

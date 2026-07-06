@@ -7,8 +7,8 @@
     },
     freshness: {
       fresh: { label: "Fresh", color: "#2E7D32", weight: 4, dashArray: null },
-      stale: { label: "Stale", color: "#F9A825", weight: 4, dashArray: "9 6" },
-      outdated: { label: "Outdated", color: "#C62828", weight: 4, dashArray: "2 7" },
+      stale: { label: "Stale", color: "#F8D64E", weight: 4, dashArray: null },
+      outdated: { label: "Outdated", color: "#8B929C", weight: 4, dashArray: null },
       no_images: { label: "No images", color: "#6D6D6D", weight: 4, dashArray: "1 8" },
     },
     street: {
@@ -21,23 +21,27 @@
       to_redo: { label: "To redo", color: "#8B0000", weight: 4, dashArray: "14 5" },
     },
     quality: {
-      full360_fresh: { label: "Full 360, fresh", color: "#1B7F3A", weight: 4, dashArray: null },
-      full360_stale: { label: "Full 360, stale", color: "#F9A825", weight: 4, dashArray: null },
-      full360_outdated: { label: "Full 360, outdated", color: "#777777", weight: 4, dashArray: null },
-      front_fresh: { label: "Front-facing, fresh", color: "#1B7F3A", weight: 4, dashArray: "2 7" },
-      front_stale: { label: "Front-facing, stale", color: "#F9A825", weight: 4, dashArray: "2 7" },
-      front_outdated: { label: "Front-facing, outdated", color: "#777777", weight: 4, dashArray: "2 7" },
-      partial_360: { label: "Partial 360", color: "#EF6C00", weight: 4, dashArray: "9 6" },
+      full360_fresh: { label: "Fresh 360", color: "#2CC28A", weight: 4, dashArray: null },
+      front_fresh: { label: "Fresh front-facing", color: "#F59B42", weight: 4, dashArray: null },
+      partial_360: { label: "Partial 360", color: "#2CC28A", weight: 4, dashArray: "2 7" },
+      stale: { label: "Stale", color: "#F8D64E", weight: 4, dashArray: null },
+      outdated: { label: "Outdated", color: "#8B929C", weight: 4, dashArray: null },
       needs_review: { label: "Needs review", color: "#6A1B9A", weight: 4, dashArray: "12 5 2 5" },
     },
   };
+
+  function qualityVisualStatus(mapStatus) {
+    if (mapStatus === "full360_stale" || mapStatus === "front_stale") return "stale";
+    if (mapStatus === "full360_outdated" || mapStatus === "front_outdated") return "outdated";
+    return mapStatus || "needs_review";
+  }
 
   function statusForFeature(feature, kind) {
     if (kind === "freshness") {
       return feature.properties.freshness_status || "no_images";
     }
     if (kind === "quality") {
-      return feature.properties.map_status || "needs_review";
+      return qualityVisualStatus(feature.properties.map_status);
     }
     return feature.properties.coverage_status || "missing";
   }

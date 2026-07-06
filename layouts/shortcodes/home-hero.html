@@ -1,3 +1,14 @@
+{{- $manifest := readFile "static/maps/data/manifest.json" | transform.Unmarshal -}}
+{{- $dataVersion := or $manifest.assets_version $manifest.current "local" -}}
+{{- $geojsonPrefetches := slice
+  "/maps/data/current/tournai-center-buildings-3d.geojson"
+  "/maps/data/current/tournai-coverage-quality.geojson"
+  "/maps/data/current/tournai-center-green-spaces.geojson"
+-}}
+{{- range $geojsonPrefetches }}
+<link rel="prefetch" href="{{ . }}?v={{ $dataVersion | urlquery }}" as="fetch" crossorigin="anonymous">
+{{- end }}
+
 <section class="home-map-hero" aria-label="Mapping Tournai overview">
   <div class="home-map-hero__content">
     <p class="home-map-hero__kicker">Street-level imagery coverage for Tournai</p>
