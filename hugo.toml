@@ -37,31 +37,21 @@ url = "/"
 weight = 10
 
 [[menu.main]]
-name = "About the project"
-url = "/about/"
+name = "Method"
+url = "/methodology/"
 weight = 20
 
 [[menu.main]]
-name = "Method"
-url = "/methodology/"
+name = "Maps"
+url = "/maps/"
 weight = 30
-
-[[menu.main]]
-name = "Coverage status"
-url = "/progress/coverage/"
-weight = 40
-
-[[menu.main]]
-name = "Areas"
-url = "/villages/"
-weight = 50
 
 [[menu.main]]
 name = "Capture notes"
 url = "/field-notes/"
-weight = 60
+weight = 40
 
 [[menu.main]]
-name = "Maps and data"
+name = "Open data"
 url = "/data/"
-weight = 70
+weight = 50

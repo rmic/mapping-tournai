@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 45.61% of the analysed road length in Quartes as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 70.45% of the analysed road length in Quartes as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 18 km |
-| Covered length | 8 km |
-| Partial length | 6 km |
-| Missing length | 3 km |
-| Covered percentage | 45.61% |
+| Covered length | 13 km |
+| Partial length | 4 km |
+| Missing length | 1 km |
+| Covered percentage | 70.45% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

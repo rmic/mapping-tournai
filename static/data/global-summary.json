@@ -1,15 +1,15 @@
 {
   "road_segments": 6313,
-  "mapillary_images": 62702,
+  "mapillary_images": 68681,
   "coverage_segments": 6313,
   "coverage_segments_by_unit": 6775,
   "analysis_units": 30,
   "total_road_length_km": 1345,
-  "covered_length_km": 390,
-  "partial_length_km": 179,
-  "missing_length_km": 776,
-  "covered_percentage": 28.98,
-  "covered_segments": 1748,
-  "partial_segments": 356,
-  "missing_segments": 4209
+  "covered_length_km": 402,
+  "partial_length_km": 161,
+  "missing_length_km": 782,
+  "covered_percentage": 29.87,
+  "covered_segments": 1896,
+  "partial_segments": 323,
+  "missing_segments": 4094
 }

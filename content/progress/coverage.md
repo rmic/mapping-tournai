@@ -13,12 +13,12 @@ The first public baseline used **11,727 Mapillary image points**. It classified 
 
 The current analysis includes **6,313 road segments** and **1,345 km** of roads. It now finds:
 
-- **390 km covered**
-- **179 km partial**
-- **776 km missing**
-- **28.98% covered**
+- **402 km covered**
+- **161 km partial**
+- **782 km missing**
+- **29.87% covered**
 
-The current dataset contains metadata for **62,702 Mapillary image points**, with captures ranging from **2015-02-19** to **2026-06-30**. When roads are split by analysis-area boundaries, the 6,313 source segments become 6,775 area-level pieces.
+The current dataset contains metadata for **68,681 Mapillary image points**, with captures ranging from **2015-02-19** to **2026-07-03**. When roads are split by analysis-area boundaries, the 6,313 source segments become 6,775 area-level pieces.
 
 ## Tournai centre focus
 
@@ -26,11 +26,11 @@ The current `Tournai` analysis unit is a little wider than the strict inside-the
 
 For the street-level 360 workflow, the current QGIS layer classifies:
 
-- **36.00 km** as `full_360`
-- **20.05 km** as `old_coverage`
-- **25.30 km** as `partial_coverage`
-- **2.35 km** as `to_redo`
-- **147.10 km** as `no_coverage`
+- **38.37 km** as `full_360`
+- **46.98 km** as `old_coverage`
+- **26.99 km** as `partial_coverage`
+- **3.62 km** as `to_redo`
+- **114.84 km** as `no_coverage`
 
 The immediate field goal remains narrower than the whole unit: reach complete 360-degree coverage inside the boulevards, then expand the same method outward.
 

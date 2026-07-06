@@ -1,6 +1,18 @@
 {
   "snapshots": [
     {
+      "id": "2026-07-06T09-11-02Z",
+      "path": "/maps/data/snapshots/2026-07-06T09-11-02Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-06T10:46:51.646306+00:00"
+    },
+    {
+      "id": "2026-07-06T08-46-41Z",
+      "path": "/maps/data/snapshots/2026-07-06T08-46-41Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-06T08:52:04.343523+00:00"
+    },
+    {
       "id": "2026-07-01T20-48-26Z",
       "path": "/maps/data/snapshots/2026-07-01T20-48-26Z/",
       "current_alias": "/maps/data/current/",
@@ -25,5 +37,5 @@
       "generated_at": "2026-07-01T06:20:21.260490+00:00"
     }
   ],
-  "current": "2026-07-01T20-48-26Z"
+  "current": "2026-07-06T09-11-02Z"
 }

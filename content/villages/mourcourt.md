@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 37.53% of the analysed road length in Mourcourt as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 29.58% of the analysed road length in Mourcourt as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 63 km |
-| Covered length | 24 km |
-| Partial length | 24 km |
-| Missing length | 16 km |
-| Covered percentage | 37.53% |
+| Covered length | 19 km |
+| Partial length | 19 km |
+| Missing length | 25 km |
+| Covered percentage | 29.58% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

@@ -5,12 +5,12 @@ description = "How recent the nearby Mapillary imagery is across Tournai."
 
 Coverage alone does not show whether imagery still reflects current conditions. The current baseline classifies road length as:
 
-- **268 km fresh**
-- **54 km stale**
-- **247 km outdated**
-- **776 km with no nearby images**
+- **275 km fresh**
+- **53 km stale**
+- **235 km outdated**
+- **782 km with no nearby images**
 
-The oldest valid capture date in the current data is **19 February 2015**. The newest is **30 June 2026**.
+The oldest valid capture date in the current data is **19 February 2015**. The newest is **3 July 2026**.
 
 ## Freshness map
 

@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 60.34% of the analysed road length in Barry as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 43.65% of the analysed road length in Barry as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 22 km |
-| Covered length | 13 km |
-| Partial length | 2 km |
-| Missing length | 7 km |
-| Covered percentage | 60.34% |
+| Covered length | 10 km |
+| Partial length | 4 km |
+| Missing length | 9 km |
+| Covered percentage | 43.65% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

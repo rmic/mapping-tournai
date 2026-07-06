@@ -3,7 +3,7 @@ title = "Mapping Tournai"
 description = "A public journal following the progressive mapillaryzation of Tournai and its 29 villages."
 +++
 
-# Mapping Tournai
+{{< home-hero >}}
 
 Mapping Tournai is a field mapping project to improve street-level imagery coverage across the municipality of Tournai, Belgium. The territory includes the city centre and 29 surrounding villages, with very different road networks, landscapes, and existing levels of imagery.
 
@@ -31,11 +31,11 @@ This site will evolve as new imagery is captured and uploaded. Over time, the me
 
 ## Current state
 
-- **62,702** Mapillary image points in the refreshed dataset
-- **28.98%** classified as covered across the wider analysed municipality
-- **776 km** still classified as missing across the wider analysed municipality
-- **36.00 km** currently accepted as `full_360` in the `Tournai` working unit
+- **68,681** Mapillary image points in the refreshed dataset
+- **29.87%** classified as covered across the wider analysed municipality
+- **782 km** still classified as missing across the wider analysed municipality
+- **38.37 km** currently classified as fresh `full_360` coverage in the `Tournai` working unit
 
 The current operational focus is the `Tournai` analysis unit. It is a little wider than the strict inside-the-boulevards area, but it remains the working perimeter for now while the first 360-degree coverage campaign concentrates on the city centre.
 
-Start with the [coverage status](/progress/coverage/), explore the [areas](/villages/), read the first [capture note](/field-notes/2026-06-25-first-camera-tests/), or follow the latest [Tournai centre field note](/field-notes/2026-07-01-mapping-tournai-inside-the-boulevards/).
+Start with the [maps](/maps/), explore the [area pages](/maps/#areas), read the first [capture note](/field-notes/2026-06-25-first-camera-tests/), or follow the latest [Tournai centre field note](/field-notes/2026-07-01-mapping-tournai-inside-the-boulevards/).

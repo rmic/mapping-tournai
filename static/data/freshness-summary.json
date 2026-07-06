@@ -1,8 +1,8 @@
 {
-  "fresh_length_km": 268,
-  "stale_length_km": 54,
-  "outdated_length_km": 247,
-  "no_images_length_km": 776,
+  "fresh_length_km": 275,
+  "stale_length_km": 53,
+  "outdated_length_km": 235,
+  "no_images_length_km": 782,
   "oldest_capture_date": "2015-02-19",
-  "newest_capture_date": "2026-06-30"
+  "newest_capture_date": "2026-07-03"
 }

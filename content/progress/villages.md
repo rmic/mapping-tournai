@@ -3,15 +3,15 @@ title = "Area comparison"
 description = "Coverage strengths and missing-road volumes across Tournai's analysis areas."
 +++
 
-The current sample shows that coverage is uneven. Barry has the highest supplied covered percentage at **60.34%**, followed by Maulde at **56.58%**, Quartes at **45.61%**, Melles at **43.37%**, and Hertain at **43.35%**.
+The current sample shows that coverage is uneven. Quartes has the highest supplied covered percentage at **70.45%**, followed by Rumillies at **56.34%**, Melles at **48.96%**, Gaurain-Ramecroix at **45.39%**, and Barry at **43.65%**.
 
 The largest supplied missing-road volumes include:
 
-- Tournai: **147 km**
-- Kain: **76 km**
-- Blandain: **47 km**
-- Templeuve: **43 km**
-- Béclers: **34 km**
+- Tournai: **122 km**
+- Kain: **80 km**
+- Blandain: **52 km**
+- Templeuve: **44 km**
+- Gaurain-Ramecroix: **33 km**
 
 These comparisons help identify where a capture session could close a large gap and where existing partial coverage could be made more consistent.
 

@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 32.64% of the analysed road length in Tournai as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 42.59% of the analysed road length in Tournai as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 231 km |
-| Covered length | 75 km |
-| Partial length | 8 km |
-| Missing length | 147 km |
-| Covered percentage | 32.64% |
+| Covered length | 98 km |
+| Partial length | 11 km |
+| Missing length | 122 km |
+| Covered percentage | 42.59% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

@@ -4,7 +4,7 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 15.01% of the analysed road length in Thimougies as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 15.03% of the analysed road length in Thimougies as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
@@ -14,7 +14,7 @@ The current baseline classifies 15.01% of the analysed road length in Thimougies
 | Covered length | 2 km |
 | Partial length | 1 km |
 | Missing length | 9 km |
-| Covered percentage | 15.01% |
+| Covered percentage | 15.03% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

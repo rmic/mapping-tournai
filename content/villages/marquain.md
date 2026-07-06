@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 24.18% of the analysed road length in Marquain as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 13.17% of the analysed road length in Marquain as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 40 km |
-| Covered length | 10 km |
-| Partial length | 10 km |
-| Missing length | 21 km |
-| Covered percentage | 24.18% |
+| Covered length | 5 km |
+| Partial length | 7 km |
+| Missing length | 28 km |
+| Covered percentage | 13.17% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

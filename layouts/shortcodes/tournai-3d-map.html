@@ -1,0 +1,418 @@
+{{ $compact := eq (.Get "compact") "true" }}
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.css">
+
+<section class="tournai-3d-map-frame{{ if $compact }} tournai-3d-map-frame--compact{{ end }}" aria-label="Tournai 3D map">
+  <div id="tournai-3d-map" class="tournai-3d-map"></div>
+  <aside class="tournai-3d-map-panel" aria-label="Coverage quality legend">
+    <h2>Coverage Quality</h2>
+    <div class="tournai-3d-map-legend">
+      <div><span class="line continuous" style="--line-color:#2cc28a"></span>Fresh 360</div>
+      <div><span class="line dashed" style="--line-color:#2cc28a"></span>Fresh front-facing</div>
+      <div><span class="line continuous" style="--line-color:#f3bf42"></span>Stale 360</div>
+      <div><span class="line dashed" style="--line-color:#f3bf42"></span>Stale front-facing</div>
+      <div><span class="line continuous" style="--line-color:#8b929c"></span>Outdated 360</div>
+      <div><span class="line dashed" style="--line-color:#8b929c"></span>Outdated front-facing</div>
+      <div><span class="line dashed" style="--line-color:#f59b42"></span>Partial 360</div>
+    </div>
+  </aside>
+  <div id="tournai-3d-map-status" class="tournai-3d-map-status">Loading coverage quality...</div>
+</section>
+
+<style>
+  .tournai-3d-map-frame {
+    position: relative;
+    min-height: 760px;
+    height: calc(100vh - 9rem);
+    margin: 1.5rem 0 2.5rem;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 8px;
+    background: #111214;
+  }
+
+  .tournai-3d-map-frame--compact {
+    min-height: 560px;
+    height: min(62vh, 640px);
+    margin: 1rem 0 2rem;
+  }
+
+  .tournai-3d-map-frame--compact .tournai-3d-map-status {
+    display: none;
+  }
+
+  .tournai-3d-map,
+  .tournai-3d-map canvas {
+    width: 100%;
+    height: 100%;
+  }
+
+  .tournai-3d-map img,
+  .tournai-3d-map canvas {
+    max-width: none !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .tournai-3d-map-panel {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    width: min(300px, calc(100% - 32px));
+    padding: 16px;
+    color: #f4f5f6;
+    background: rgba(25, 27, 31, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    box-shadow: 0 18px 70px rgba(0, 0, 0, 0.34);
+    backdrop-filter: blur(18px);
+  }
+
+  .tournai-3d-map-panel h2 {
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.2;
+    color: #a9adb5;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+
+  .tournai-3d-map-legend {
+    display: grid;
+    gap: 7px;
+    color: #a9adb5;
+    font-size: 12px;
+  }
+
+  .tournai-3d-map-legend > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .tournai-3d-map-legend .line {
+    width: 26px;
+    flex: 0 0 26px;
+    border-top: 3px solid var(--line-color);
+    border-radius: 999px;
+  }
+
+  .tournai-3d-map-legend .dashed {
+    border-top-style: dashed;
+  }
+
+  .tournai-3d-map-status {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    z-index: 2;
+    max-width: min(820px, calc(100% - 32px));
+    padding: 10px 14px;
+    color: #a9adb5;
+    background: rgba(18, 19, 22, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .tournai-3d-map-frame .maplibregl-ctrl-group,
+  .tournai-3d-map-frame .maplibregl-ctrl-attrib {
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.18);
+  }
+
+  .tournai-3d-map-frame .maplibregl-ctrl-attrib {
+    background: rgba(245, 247, 249, 0.88);
+  }
+
+  @media screen and (max-width: 700px) {
+    .tournai-3d-map-frame {
+      height: 76vh;
+      min-height: 620px;
+      margin-top: 1rem;
+    }
+
+    .tournai-3d-map-frame--compact {
+      height: 68vh;
+      min-height: 520px;
+    }
+
+    .tournai-3d-map-panel {
+      width: min(292px, calc(100% - 32px));
+    }
+  }
+</style>
+
+<script src="https://unpkg.com/maplibre-gl@5.24.0/dist/maplibre-gl.js"></script>
+<script>
+  (() => {
+    const mapContainer = document.getElementById("tournai-3d-map");
+    if (!mapContainer || mapContainer.dataset.initialized === "true") return;
+    mapContainer.dataset.initialized = "true";
+
+    const buildingDataPath = "/maps/data/current/tournai-center-buildings-3d.geojson";
+    const greenSpaceDataPath = "/maps/data/current/tournai-center-green-spaces.geojson";
+    const coverageDataPath = "/maps/data/current/tournai-coverage-quality.geojson";
+
+    const map = new maplibregl.Map({
+      container: "tournai-3d-map",
+      style: "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+      center: [3.3899, 50.6062],
+      zoom: 15.35,
+      pitch: 58,
+      bearing: -24,
+      maxPitch: 75,
+      attributionControl: { compact: false },
+      canvasContextAttributes: { antialias: true },
+    });
+
+    map.addControl(new maplibregl.NavigationControl({ visualizePitch: true }), "top-right");
+    map.addControl(new maplibregl.ScaleControl({ unit: "metric" }), "bottom-right");
+
+    function firstSymbolLayerId() {
+      const layers = map.getStyle().layers || [];
+      const label = layers.find((layer) => layer.type === "symbol" && layer.layout && layer.layout["text-field"]);
+      return label && label.id;
+    }
+
+    function coverageColorExpression() {
+      return [
+        "match",
+        ["get", "map_status"],
+        "full360_fresh", "#2cc28a",
+        "front_fresh", "#2cc28a",
+        "full360_stale", "#f3bf42",
+        "front_stale", "#f3bf42",
+        "partial_360", "#f59b42",
+        "needs_review", "#8d72ff",
+        "full360_outdated", "#8b929c",
+        "front_outdated", "#8b929c",
+        "#e55f5f",
+      ];
+    }
+
+    function applyMutedNaturalColors() {
+      if (map.getLayer("water")) {
+        map.setPaintProperty("water", "fill-color", "#253f4a");
+        map.setPaintProperty("water", "fill-opacity", 1);
+      }
+      if (map.getLayer("water_shadow")) {
+        map.setPaintProperty("water_shadow", "fill-color", "#172b33");
+        map.setPaintProperty("water_shadow", "fill-opacity", 0.6);
+      }
+      if (map.getLayer("waterway")) {
+        map.setPaintProperty("waterway", "line-color", "#315667");
+        map.setPaintProperty("waterway", "line-opacity", 0.9);
+      }
+      ["park_national_park", "park_nature_reserve", "landuse"].forEach((layerId) => {
+        if (!map.getLayer(layerId)) return;
+        map.setPaintProperty(layerId, "fill-color", "#263b30");
+        map.setPaintProperty(layerId, "fill-opacity", 0.76);
+      });
+    }
+
+    function coverageLabel(status) {
+      if (status === "full360_fresh") return "Fresh 360";
+      if (status === "front_fresh") return "Fresh front-facing";
+      if (status === "full360_stale") return "Stale 360";
+      if (status === "front_stale") return "Stale front-facing";
+      if (status === "full360_outdated") return "Outdated 360";
+      if (status === "front_outdated") return "Outdated front-facing";
+      if (status === "partial_360") return "Partial 360";
+      if (status === "needs_review") return "Needs review";
+      return "Other";
+    }
+
+    function formatKm(metres) {
+      return `${(metres / 1000).toFixed(1)} km`;
+    }
+
+    function coverageSummary(features) {
+      const order = [
+        "Fresh 360",
+        "Fresh front-facing",
+        "Stale 360",
+        "Stale front-facing",
+        "Outdated 360",
+        "Outdated front-facing",
+        "Partial 360",
+        "Needs review",
+        "Other",
+      ];
+      const groups = features.reduce((acc, feature) => {
+        const label = coverageLabel(feature.properties && feature.properties.map_status);
+        if (!acc[label]) acc[label] = { count: 0, metres: 0 };
+        acc[label].count += 1;
+        acc[label].metres += Number(feature.properties && feature.properties.length_m) || 0;
+        return acc;
+      }, {});
+      return order
+        .filter((label) => groups[label])
+        .map((label) => `${label}: ${groups[label].count} segments / ${formatKm(groups[label].metres)}`)
+        .join(" · ");
+    }
+
+    async function loadMetadata(url) {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) throw new Error(`Could not load ${url}`);
+      return response.json();
+    }
+
+    async function loadDataVersion() {
+      try {
+        const response = await fetch("/maps/data/manifest.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("manifest unavailable");
+        const manifest = await response.json();
+        return manifest.current || "local";
+      } catch {
+        return "local";
+      }
+    }
+
+    function versioned(path, version) {
+      return `${path}?v=${encodeURIComponent(version)}`;
+    }
+
+    function popupHtml(props) {
+      const title = props.name || `${props.osm_type}/${props.osm_id}`;
+      const rows = [
+        ["Height", `${props.height_m} m`],
+        ["Source", props.height_source],
+        ["Levels", props.building_levels || "n/a"],
+        ["OSM", `${props.osm_type}/${props.osm_id}`],
+      ];
+      return `
+        <div class="popup-title">${title}</div>
+        <dl class="popup-grid">
+          ${rows.map(([key, value]) => `<dt>${key}</dt><dd>${value}</dd>`).join("")}
+        </dl>
+      `;
+    }
+
+    map.on("load", async () => {
+      const labelLayerId = firstSymbolLayerId();
+      applyMutedNaturalColors();
+      const dataVersion = await loadDataVersion();
+      const buildingDataUrl = versioned(buildingDataPath, dataVersion);
+      const greenSpaceDataUrl = versioned(greenSpaceDataPath, dataVersion);
+      const coverageDataUrl = versioned(coverageDataPath, dataVersion);
+
+      map.addSource("tournai-buildings", { type: "geojson", data: buildingDataUrl, generateId: true });
+      map.addSource("tournai-green-spaces", { type: "geojson", data: greenSpaceDataUrl });
+
+      map.addLayer(
+        {
+          id: "tournai-green-spaces-fill",
+          type: "fill",
+          source: "tournai-green-spaces",
+          paint: {
+            "fill-color": [
+              "match",
+              ["coalesce", ["get", "leisure"], ["get", "landuse"], ["get", "natural"]],
+              "cemetery", "#26372f",
+              "wood", "#24382d",
+              "scrub", "#283d31",
+              "#2b4335",
+            ],
+            "fill-opacity": 0.58,
+          },
+        },
+        labelLayerId
+      );
+
+      map.addLayer(
+        {
+          id: "tournai-buildings-3d",
+          type: "fill-extrusion",
+          source: "tournai-buildings",
+          minzoom: 13,
+          paint: {
+            "fill-extrusion-color": [
+              "match",
+              ["get", "height_source"],
+              "height", "#b8c1cc",
+              "building:levels", "#7f8994",
+              "#505863",
+            ],
+            "fill-extrusion-height": [
+              "interpolate",
+              ["linear"],
+              ["zoom"],
+              13,
+              0,
+              15,
+              ["to-number", ["get", "height_m"]],
+            ],
+            "fill-extrusion-base": ["to-number", ["coalesce", ["get", "min_height_m"], 0]],
+            "fill-extrusion-opacity": 0.88,
+            "fill-extrusion-vertical-gradient": true,
+          },
+        },
+        labelLayerId
+      );
+
+      map.addSource("coverage-quality", { type: "geojson", data: coverageDataUrl, lineMetrics: true });
+      map.addLayer(
+        {
+          id: "coverage-quality-halo",
+          type: "line",
+          source: "coverage-quality",
+          paint: {
+            "line-color": "#050608",
+            "line-width": ["interpolate", ["linear"], ["zoom"], 12, 3, 16, 8],
+            "line-opacity": 0.84,
+          },
+        },
+        labelLayerId
+      );
+      map.addLayer(
+        {
+          id: "coverage-quality-line",
+          type: "line",
+          source: "coverage-quality",
+          paint: {
+            "line-color": coverageColorExpression(),
+            "line-width": ["interpolate", ["linear"], ["zoom"], 12, 1.5, 16, 4],
+            "line-opacity": 0.94,
+            "line-dasharray": [
+              "match",
+              ["get", "map_status"],
+              "front_fresh", ["literal", [1, 1.4]],
+              "front_stale", ["literal", [1, 1.4]],
+              "front_outdated", ["literal", [1, 1.4]],
+              "partial_360", ["literal", [2.2, 1.4]],
+              "needs_review", ["literal", [3, 1.2, 0.8, 1.2]],
+              ["literal", [1, 0]],
+            ],
+          },
+        },
+        labelLayerId
+      );
+
+      map.on("click", "tournai-buildings-3d", (event) => {
+        const feature = event.features && event.features[0];
+        if (!feature) return;
+        new maplibregl.Popup({ offset: 12 })
+          .setLngLat(event.lngLat)
+          .setHTML(popupHtml(feature.properties || {}))
+          .addTo(map);
+      });
+      map.on("mouseenter", "tournai-buildings-3d", () => {
+        map.getCanvas().style.cursor = "pointer";
+      });
+      map.on("mouseleave", "tournai-buildings-3d", () => {
+        map.getCanvas().style.cursor = "";
+      });
+
+      try {
+        const coverage = await loadMetadata(coverageDataUrl);
+        document.getElementById("tournai-3d-map-status").textContent = coverageSummary(coverage.features);
+      } catch (error) {
+        document.getElementById("tournai-3d-map-status").textContent = error.message;
+      }
+    });
+  })();
+</script>
