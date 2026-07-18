@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 49.4% of the analysed road length in Havinnes as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 15.53% of the analysed road length in Havinnes as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 44 km |
-| Covered length | 22 km |
-| Partial length | 5 km |
+| Covered length | 7 km |
+| Partial length | 19 km |
 | Missing length | 18 km |
-| Covered percentage | 49.4% |
+| Covered percentage | 15.53% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

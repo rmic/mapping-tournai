@@ -1,6 +1,12 @@
 {
   "snapshots": [
     {
+      "id": "2026-07-18T14-58-36Z",
+      "path": "/maps/data/snapshots/2026-07-18T14-58-36Z/",
+      "current_alias": "/maps/data/current/",
+      "generated_at": "2026-07-18T15:00:37.073348+00:00"
+    },
+    {
       "id": "2026-07-18T13-23-33Z",
       "path": "/maps/data/snapshots/2026-07-18T13-23-33Z/",
       "current_alias": "/maps/data/current/",
@@ -43,6 +49,6 @@
       "generated_at": "2026-07-01T06:20:21.260490+00:00"
     }
   ],
-  "current": "2026-07-18T13-23-33Z",
-  "assets_version": "2026-07-18T13-23-33Z"
+  "current": "2026-07-18T14-58-36Z",
+  "assets_version": "2026-07-18T14-58-36Z"
 }

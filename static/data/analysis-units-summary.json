@@ -1,203 +1,139 @@
 [
   {
-    "unit_name": "Melles",
-    "total_length_km": 16,
-    "covered_length_km": 11,
-    "partial_length_km": 0,
-    "missing_length_km": 4,
-    "covered_percentage": 69.53
-  },
-  {
-    "unit_name": "Maulde",
-    "total_length_km": 37,
-    "covered_length_km": 23,
-    "partial_length_km": 0,
-    "missing_length_km": 13,
-    "covered_percentage": 63.68
-  },
-  {
-    "unit_name": "Quartes",
-    "total_length_km": 18,
-    "covered_length_km": 11,
-    "partial_length_km": 0,
-    "missing_length_km": 7,
-    "covered_percentage": 60.85
-  },
-  {
-    "unit_name": "Barry",
-    "total_length_km": 22,
-    "covered_length_km": 13,
-    "partial_length_km": 0,
-    "missing_length_km": 9,
-    "covered_percentage": 59.43
-  },
-  {
-    "unit_name": "Havinnes",
-    "total_length_km": 44,
-    "covered_length_km": 22,
-    "partial_length_km": 5,
-    "missing_length_km": 18,
-    "covered_percentage": 49.4
+    "unit_name": "Vezon",
+    "total_length_km": 30,
+    "covered_length_km": 7,
+    "partial_length_km": 4,
+    "missing_length_km": 19,
+    "covered_percentage": 24.22
   },
   {
     "unit_name": "Rumillies",
     "total_length_km": 45,
-    "covered_length_km": 21,
-    "partial_length_km": 4,
-    "missing_length_km": 19,
-    "covered_percentage": 46.98
+    "covered_length_km": 9,
+    "partial_length_km": 11,
+    "missing_length_km": 24,
+    "covered_percentage": 20.51
   },
   {
-    "unit_name": "Ramegnies-Chin",
-    "total_length_km": 22,
-    "covered_length_km": 10,
-    "partial_length_km": 3,
-    "missing_length_km": 9,
-    "covered_percentage": 45.66
-  },
-  {
-    "unit_name": "Vezon",
-    "total_length_km": 30,
-    "covered_length_km": 13,
-    "partial_length_km": 2,
-    "missing_length_km": 15,
-    "covered_percentage": 42.05
-  },
-  {
-    "unit_name": "Hertain",
-    "total_length_km": 19,
-    "covered_length_km": 8,
-    "partial_length_km": 3,
-    "missing_length_km": 8,
-    "covered_percentage": 40.7
-  },
-  {
-    "unit_name": "Mourcourt",
-    "total_length_km": 63,
-    "covered_length_km": 25,
-    "partial_length_km": 18,
-    "missing_length_km": 20,
-    "covered_percentage": 39.9
-  },
-  {
-    "unit_name": "Templeuve",
-    "total_length_km": 94,
-    "covered_length_km": 36,
-    "partial_length_km": 13,
-    "missing_length_km": 45,
-    "covered_percentage": 38.32
-  },
-  {
-    "unit_name": "Froyennes",
-    "total_length_km": 62,
-    "covered_length_km": 22,
-    "partial_length_km": 19,
-    "missing_length_km": 21,
-    "covered_percentage": 35.48
-  },
-  {
-    "unit_name": "Gaurain-Ramecroix",
-    "total_length_km": 81,
-    "covered_length_km": 28,
-    "partial_length_km": 6,
-    "missing_length_km": 46,
-    "covered_percentage": 35.12
-  },
-  {
-    "unit_name": "Béclers",
-    "total_length_km": 60,
-    "covered_length_km": 20,
-    "partial_length_km": 8,
-    "missing_length_km": 33,
-    "covered_percentage": 32.59
-  },
-  {
-    "unit_name": "Mont-Saint-Aubert",
-    "total_length_km": 40,
-    "covered_length_km": 11,
+    "unit_name": "Melles",
+    "total_length_km": 16,
+    "covered_length_km": 3,
     "partial_length_km": 7,
-    "missing_length_km": 22,
-    "covered_percentage": 27.91
+    "missing_length_km": 5,
+    "covered_percentage": 19.86
   },
   {
-    "unit_name": "Kain",
-    "total_length_km": 101,
-    "covered_length_km": 27,
-    "partial_length_km": 13,
-    "missing_length_km": 62,
-    "covered_percentage": 26.35
+    "unit_name": "Havinnes",
+    "total_length_km": 44,
+    "covered_length_km": 7,
+    "partial_length_km": 19,
+    "missing_length_km": 18,
+    "covered_percentage": 15.53
   },
   {
     "unit_name": "Warchin",
     "total_length_km": 25,
-    "covered_length_km": 6,
-    "partial_length_km": 2,
+    "covered_length_km": 3,
+    "partial_length_km": 5,
     "missing_length_km": 17,
-    "covered_percentage": 23.94
+    "covered_percentage": 12.49
   },
   {
-    "unit_name": "Chercq",
-    "total_length_km": 17,
-    "covered_length_km": 4,
-    "partial_length_km": 2,
-    "missing_length_km": 11,
-    "covered_percentage": 22.47
+    "unit_name": "Gaurain-Ramecroix",
+    "total_length_km": 81,
+    "covered_length_km": 9,
+    "partial_length_km": 21,
+    "missing_length_km": 51,
+    "covered_percentage": 11.06
   },
   {
     "unit_name": "Tournai",
     "total_length_km": 231,
-    "covered_length_km": 52,
-    "partial_length_km": 12,
-    "missing_length_km": 167,
-    "covered_percentage": 22.45
+    "covered_length_km": 22,
+    "partial_length_km": 41,
+    "missing_length_km": 168,
+    "covered_percentage": 9.43
   },
   {
-    "unit_name": "Vaulx",
-    "total_length_km": 27,
-    "covered_length_km": 4,
-    "partial_length_km": 1,
-    "missing_length_km": 22,
-    "covered_percentage": 14.53
+    "unit_name": "Barry",
+    "total_length_km": 22,
+    "covered_length_km": 2,
+    "partial_length_km": 10,
+    "missing_length_km": 10,
+    "covered_percentage": 8.72
+  },
+  {
+    "unit_name": "Béclers",
+    "total_length_km": 60,
+    "covered_length_km": 5,
+    "partial_length_km": 20,
+    "missing_length_km": 35,
+    "covered_percentage": 7.49
+  },
+  {
+    "unit_name": "Templeuve",
+    "total_length_km": 94,
+    "covered_length_km": 5,
+    "partial_length_km": 32,
+    "missing_length_km": 56,
+    "covered_percentage": 5.38
+  },
+  {
+    "unit_name": "Kain",
+    "total_length_km": 101,
+    "covered_length_km": 5,
+    "partial_length_km": 27,
+    "missing_length_km": 70,
+    "covered_percentage": 4.48
+  },
+  {
+    "unit_name": "Maulde",
+    "total_length_km": 37,
+    "covered_length_km": 2,
+    "partial_length_km": 22,
+    "missing_length_km": 13,
+    "covered_percentage": 4.38
+  },
+  {
+    "unit_name": "Mourcourt",
+    "total_length_km": 63,
+    "covered_length_km": 2,
+    "partial_length_km": 26,
+    "missing_length_km": 35,
+    "covered_percentage": 2.78
   },
   {
     "unit_name": "Marquain",
     "total_length_km": 40,
-    "covered_length_km": 6,
-    "partial_length_km": 8,
-    "missing_length_km": 27,
-    "covered_percentage": 14.35
+    "covered_length_km": 0,
+    "partial_length_km": 9,
+    "missing_length_km": 31,
+    "covered_percentage": 0.81
   },
   {
-    "unit_name": "Lamain",
-    "total_length_km": 19,
-    "covered_length_km": 3,
-    "partial_length_km": 0,
-    "missing_length_km": 17,
-    "covered_percentage": 14.02
+    "unit_name": "Froyennes",
+    "total_length_km": 62,
+    "covered_length_km": 0,
+    "partial_length_km": 36,
+    "missing_length_km": 26,
+    "covered_percentage": 0.04
   },
   {
     "unit_name": "Blandain",
     "total_length_km": 82,
-    "covered_length_km": 7,
+    "covered_length_km": 0,
     "partial_length_km": 16,
-    "missing_length_km": 59,
-    "covered_percentage": 8.6
+    "missing_length_km": 66,
+    "covered_percentage": 0
   },
   {
-    "unit_name": "Saint-Maur",
-    "total_length_km": 14,
-    "covered_length_km": 1,
-    "partial_length_km": 0,
-    "missing_length_km": 12,
-    "covered_percentage": 7.36
-  },
-  {
-    "unit_name": "Orcq",
-    "total_length_km": 21,
-    "covered_length_km": 1,
+    "unit_name": "Chercq",
+    "total_length_km": 17,
+    "covered_length_km": 0,
     "partial_length_km": 4,
-    "missing_length_km": 17,
-    "covered_percentage": 2.47
+    "missing_length_km": 13,
+    "covered_percentage": 0
   },
   {
     "unit_name": "Ere",
@@ -211,8 +147,8 @@
     "unit_name": "Esplechin",
     "total_length_km": 33,
     "covered_length_km": 0,
-    "partial_length_km": 2,
-    "missing_length_km": 31,
+    "partial_length_km": 0,
+    "missing_length_km": 33,
     "covered_percentage": 0
   },
   {
@@ -224,11 +160,75 @@
     "covered_percentage": 0
   },
   {
+    "unit_name": "Hertain",
+    "total_length_km": 19,
+    "covered_length_km": 0,
+    "partial_length_km": 9,
+    "missing_length_km": 10,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Lamain",
+    "total_length_km": 19,
+    "covered_length_km": 0,
+    "partial_length_km": 2,
+    "missing_length_km": 18,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Mont-Saint-Aubert",
+    "total_length_km": 40,
+    "covered_length_km": 0,
+    "partial_length_km": 11,
+    "missing_length_km": 30,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Orcq",
+    "total_length_km": 21,
+    "covered_length_km": 0,
+    "partial_length_km": 4,
+    "missing_length_km": 18,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Quartes",
+    "total_length_km": 18,
+    "covered_length_km": 0,
+    "partial_length_km": 11,
+    "missing_length_km": 7,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Ramegnies-Chin",
+    "total_length_km": 22,
+    "covered_length_km": 0,
+    "partial_length_km": 11,
+    "missing_length_km": 12,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Saint-Maur",
+    "total_length_km": 14,
+    "covered_length_km": 0,
+    "partial_length_km": 2,
+    "missing_length_km": 12,
+    "covered_percentage": 0
+  },
+  {
     "unit_name": "Thimougies",
     "total_length_km": 12,
     "covered_length_km": 0,
     "partial_length_km": 0,
     "missing_length_km": 12,
+    "covered_percentage": 0
+  },
+  {
+    "unit_name": "Vaulx",
+    "total_length_km": 27,
+    "covered_length_km": 0,
+    "partial_length_km": 4,
+    "missing_length_km": 23,
     "covered_percentage": 0
   },
   {

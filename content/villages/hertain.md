@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 40.7% of the analysed road length in Hertain as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 0% of the analysed road length in Hertain as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 19 km |
-| Covered length | 8 km |
-| Partial length | 3 km |
-| Missing length | 8 km |
-| Covered percentage | 40.7% |
+| Covered length | 0 km |
+| Partial length | 9 km |
+| Missing length | 10 km |
+| Covered percentage | 0% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 38.32% of the analysed road length in Templeuve as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 5.38% of the analysed road length in Templeuve as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 94 km |
-| Covered length | 36 km |
-| Partial length | 13 km |
-| Missing length | 45 km |
-| Covered percentage | 38.32% |
+| Covered length | 5 km |
+| Partial length | 32 km |
+| Missing length | 56 km |
+| Covered percentage | 5.38% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

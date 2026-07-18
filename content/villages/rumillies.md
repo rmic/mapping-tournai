@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 46.98% of the analysed road length in Rumillies as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 20.51% of the analysed road length in Rumillies as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 45 km |
-| Covered length | 21 km |
-| Partial length | 4 km |
-| Missing length | 19 km |
-| Covered percentage | 46.98% |
+| Covered length | 9 km |
+| Partial length | 11 km |
+| Missing length | 24 km |
+| Covered percentage | 20.51% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

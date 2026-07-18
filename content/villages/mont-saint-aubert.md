@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 27.91% of the analysed road length in Mont-Saint-Aubert as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 0% of the analysed road length in Mont-Saint-Aubert as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 40 km |
-| Covered length | 11 km |
-| Partial length | 7 km |
-| Missing length | 22 km |
-| Covered percentage | 27.91% |
+| Covered length | 0 km |
+| Partial length | 11 km |
+| Missing length | 30 km |
+| Covered percentage | 0% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

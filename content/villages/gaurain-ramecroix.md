@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 35.12% of the analysed road length in Gaurain-Ramecroix as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 11.06% of the analysed road length in Gaurain-Ramecroix as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 81 km |
-| Covered length | 28 km |
-| Partial length | 6 km |
-| Missing length | 46 km |
-| Covered percentage | 35.12% |
+| Covered length | 9 km |
+| Partial length | 21 km |
+| Missing length | 51 km |
+| Covered percentage | 11.06% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

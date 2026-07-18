@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 7.36% of the analysed road length in Saint-Maur as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 0% of the analysed road length in Saint-Maur as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 14 km |
-| Covered length | 1 km |
-| Partial length | 0 km |
+| Covered length | 0 km |
+| Partial length | 2 km |
 | Missing length | 12 km |
-| Covered percentage | 7.36% |
+| Covered percentage | 0% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

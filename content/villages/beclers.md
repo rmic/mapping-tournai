@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 32.59% of the analysed road length in Béclers as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 7.49% of the analysed road length in Béclers as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 60 km |
-| Covered length | 20 km |
-| Partial length | 8 km |
-| Missing length | 33 km |
-| Covered percentage | 32.59% |
+| Covered length | 5 km |
+| Partial length | 20 km |
+| Missing length | 35 km |
+| Covered percentage | 7.49% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

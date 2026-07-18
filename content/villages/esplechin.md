@@ -12,8 +12,8 @@ The current baseline classifies 0% of the analysed road length in Esplechin as c
 | --- | ---: |
 | Total road length | 33 km |
 | Covered length | 0 km |
-| Partial length | 2 km |
-| Missing length | 31 km |
+| Partial length | 0 km |
+| Missing length | 33 km |
 | Covered percentage | 0% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.

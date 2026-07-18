@@ -71,7 +71,7 @@
     const status = statusForFeature(feature, kind);
     const rows = [
       ["Status", status],
-      ["Computed status", props.coverage_status],
+      ["Computed status", props.computed_coverage_status || props.coverage_status],
       ["Mode", props.coverage_mode],
       ["Freshness", props.freshness_status],
       ["Length", props.length_m ? `${rounded(props.length_m / 1000, 2)} km` : null],
