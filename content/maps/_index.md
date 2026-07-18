@@ -18,7 +18,7 @@ The table is generated from `data/processed/analysis_units_stats.csv`. Complete 
 
 | Area | Complete coverage | Total road length | Covered length | Partial length | Missing length |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| [Tournai](/villages/tournai/) | 9.43% | 231 km | 22 km | 41 km | 168 km |
+| [Tournai](/villages/tournai/) | 22.48% | 231 km | 52 km | 47 km | 132 km |
 | [Barry](/villages/barry/) | 8.72% | 22 km | 2 km | 10 km | 10 km |
 | [Blandain](/villages/blandain/) | 0% | 82 km | 0 km | 16 km | 66 km |
 | [Béclers](/villages/beclers/) | 7.49% | 60 km | 5 km | 20 km | 35 km |

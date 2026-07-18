@@ -8,6 +8,14 @@
     "covered_percentage": 24.22
   },
   {
+    "unit_name": "Tournai",
+    "total_length_km": 231,
+    "covered_length_km": 52,
+    "partial_length_km": 47,
+    "missing_length_km": 132,
+    "covered_percentage": 22.48
+  },
+  {
     "unit_name": "Rumillies",
     "total_length_km": 45,
     "covered_length_km": 9,
@@ -46,14 +54,6 @@
     "partial_length_km": 21,
     "missing_length_km": 51,
     "covered_percentage": 11.06
-  },
-  {
-    "unit_name": "Tournai",
-    "total_length_km": 231,
-    "covered_length_km": 22,
-    "partial_length_km": 41,
-    "missing_length_km": 168,
-    "covered_percentage": 9.43
   },
   {
     "unit_name": "Barry",
