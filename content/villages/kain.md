@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 14.76% of the analysed road length in Kain as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 26.35% of the analysed road length in Kain as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 101 km |
-| Covered length | 15 km |
-| Partial length | 6 km |
-| Missing length | 80 km |
-| Covered percentage | 14.76% |
+| Covered length | 27 km |
+| Partial length | 13 km |
+| Missing length | 62 km |
+| Covered percentage | 26.35% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

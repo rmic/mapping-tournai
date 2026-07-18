@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 15.44% of the analysed road length in Maulde as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 63.68% of the analysed road length in Maulde as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 37 km |
-| Covered length | 6 km |
+| Covered length | 23 km |
 | Partial length | 0 km |
-| Missing length | 31 km |
-| Covered percentage | 15.44% |
+| Missing length | 13 km |
+| Covered percentage | 63.68% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

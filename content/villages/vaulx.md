@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 19.12% of the analysed road length in Vaulx as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 14.53% of the analysed road length in Vaulx as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 27 km |
-| Covered length | 5 km |
+| Covered length | 4 km |
 | Partial length | 1 km |
-| Missing length | 20 km |
-| Covered percentage | 19.12% |
+| Missing length | 22 km |
+| Covered percentage | 14.53% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

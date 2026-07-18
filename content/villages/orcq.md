@@ -4,7 +4,7 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 5.13% of the analysed road length in Orcq as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 2.47% of the analysed road length in Orcq as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
@@ -12,9 +12,9 @@ The current baseline classifies 5.13% of the analysed road length in Orcq as cov
 | --- | ---: |
 | Total road length | 21 km |
 | Covered length | 1 km |
-| Partial length | 3 km |
-| Missing length | 18 km |
-| Covered percentage | 5.13% |
+| Partial length | 4 km |
+| Missing length | 17 km |
+| Covered percentage | 2.47% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

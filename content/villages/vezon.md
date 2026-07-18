@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 13.88% of the analysed road length in Vezon as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 42.05% of the analysed road length in Vezon as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 30 km |
-| Covered length | 4 km |
-| Partial length | 0 km |
-| Missing length | 26 km |
-| Covered percentage | 13.88% |
+| Covered length | 13 km |
+| Partial length | 2 km |
+| Missing length | 15 km |
+| Covered percentage | 42.05% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

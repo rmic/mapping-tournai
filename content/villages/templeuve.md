@@ -13,7 +13,7 @@ The current baseline classifies 38.32% of the analysed road length in Templeuve 
 | Total road length | 94 km |
 | Covered length | 36 km |
 | Partial length | 13 km |
-| Missing length | 44 km |
+| Missing length | 45 km |
 | Covered percentage | 38.32% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.

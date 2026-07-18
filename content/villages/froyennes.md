@@ -4,17 +4,17 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 34.01% of the analysed road length in Froyennes as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 35.48% of the analysed road length in Froyennes as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
 | Indicator | Value |
 | --- | ---: |
 | Total road length | 62 km |
-| Covered length | 21 km |
-| Partial length | 17 km |
-| Missing length | 24 km |
-| Covered percentage | 34.01% |
+| Covered length | 22 km |
+| Partial length | 19 km |
+| Missing length | 21 km |
+| Covered percentage | 35.48% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 

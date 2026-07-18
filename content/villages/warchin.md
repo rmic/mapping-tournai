@@ -4,7 +4,7 @@ description = "Current street-level imagery coverage and capture priorities for 
 generated = true
 +++
 
-The current baseline classifies 24.82% of the analysed road length in Warchin as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
+The current baseline classifies 23.94% of the analysed road length in Warchin as covered. This page is a working status record for the Mapping Tournai field project and will evolve after future capture sessions.
 
 ## Current coverage
 
@@ -13,8 +13,8 @@ The current baseline classifies 24.82% of the analysed road length in Warchin as
 | Total road length | 25 km |
 | Covered length | 6 km |
 | Partial length | 2 km |
-| Missing length | 16 km |
-| Covered percentage | 24.82% |
+| Missing length | 17 km |
+| Covered percentage | 23.94% |
 
 Values that are not present in the source CSV are left unavailable rather than estimated.
 
